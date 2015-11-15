@@ -50,4 +50,11 @@ def edges2triangles():
     print (len(edges), len(nodes))
     out_file.close()
 
+    nodes_file = open('nodes.csv', 'w')
+    
+    for id in friends :
+        nodes_file.write(str(id) + "\t" + str(len(friends[id])) + "\n")
+
+    nodes_file.close()
+
 edges2triangles()
